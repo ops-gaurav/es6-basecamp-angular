@@ -1,0 +1,55 @@
+#! /usr/bin/env node
+
+/**
+ * The starter script for the app
+ * @author gaurav
+ */
+require('babel-core/register');
+require('babel-polyfill');
+
+import index from '../index';
+import http from 'http';
+
+const app = index.initializer;
+
+var deployed = false;
+
+/**
+ * @desc this function will parse for port number in environment
+ * if not found this will generate a random port number which will be 
+ * then tested for validity and availibility
+ * @param {string} p as port number in PORT environment variable
+ */
+var parseAndNormalizePort = (p) => {
+	const port = parseInt(p);
+
+	/**
+	 * check if port is available in environment variable
+	 */
+	if (isNaN(port)) {
+		/**
+		 * use port 4004
+		 */
+		return parseInt(4004);
+		// processPortValidity (app.get ('port'));
+	} else {
+		return port;
+	}
+}
+
+const server = http.createServer(app);
+
+const port = parseAndNormalizePort(process.env.PORT);
+console.log('normalized port is ' + port);
+
+server.listen(port);
+
+server.on('error', err => {
+	if (err.code == 'EADDRINUSE') {
+		console.log(port + ' already in use.. choosing new port');
+	}
+});
+
+server.on('listening', () => {
+	console.log('server running on port '+ port);
+});

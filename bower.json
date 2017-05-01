@@ -1,0 +1,21 @@
+{
+  "name": "es6-basecamp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "gaurav sharma"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/sharma02gaurav/es6-basecamp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
