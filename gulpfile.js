@@ -18,5 +18,4 @@ gulp.task ('scripts', function () {
 		.pipe (	babel ({presets: ['es2015']}))
 		.pipe (uglify ({mangle: false}))
 		.pipe (gulp.dest (destinationFiles));
-
 });

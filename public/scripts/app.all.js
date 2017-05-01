@@ -18,16 +18,7 @@
 					}
 				}
 			})
-			.state ('default', {
-				url: '/',
-				views: {
-					'navbar@default': {
-						templateUrl: '/partials/navbar.partial.html'
-					}
-				}
-			});
 
-		
 		$urlRouterProvider.otherwise ('/');
 	}
 })();

@@ -1,2 +1,4 @@
 node_modules
 bower_components
+public/scripts/angular/app.all.js
+public/scripts/angular/app.min.js
