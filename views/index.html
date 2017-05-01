@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='app'>
 	<head>
-		<title></title>
+		<title>ES6- Angular Scaffolding app</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
@@ -12,17 +12,23 @@
 
 	</head>
 	<body class='app-body'>
-		<section class='loader-container-screen'>
-			<section class='loader'></section>
-		</section>
-		<h1 class='page-haeder text-center'>
-			ES-6 scaffolding is up and running
-		</h1>
-
-
+		<section class='loader-container-screen'><section class='loader'></section></section>
+		
+		
+		<section class='container'>
+			<section ui-view></section>
+		</section>	
+		
+	
 		<script type='text/javascript' src='/jquery/dist/jquery.min.js' ></script>
 		<script type='text/javascript' src='/bootstrap/dist/js/bootstrap.min.js' ></script>
 
+		<!-- angular JS dependency -->
+		<script type='text/javascript' src='/angular/angular.min.js' type='text/javascript'></script>
+		<script type='text/javascript' src='/angular-ui-router/release/angular-ui-router.min.js' ></script>
+		<script type='text/javascript' src='/scripts/app.min.js' type='text/javascript'></script>
+
 		<script type='text/javascript' src='/scripts/main.js' ></script>
+	
 	</body>
 </html>
