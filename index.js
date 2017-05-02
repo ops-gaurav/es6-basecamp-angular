@@ -19,6 +19,6 @@ app.use (morgan(app.get ('environment')));
 app.use (bodyParser.json());
 
 // configuring routes
-app.use ('/index', index);
+app.use ('/', index);
 
 module.exports.initializer = app;
